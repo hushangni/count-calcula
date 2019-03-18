@@ -1,0 +1,147 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:01C 01D 018 019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.wrapper {
+    margin: 0 auto;
+    width: 320px;
+    position: relative;
+    text-align: center;
+}
+
+body {
+    background-color: #000;
+    background: rgb(64,2,2);
+    background: -moz-linear-gradient(0deg, rgba(64,2,2,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(64,2,2,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(64,2,2,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400202",endColorstr="#000000",GradientType=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    z-index: 1;
+}
+
+.teeth {
+    width: 320px;
+    position: absolute;
+    top: 76px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teeth.bottom {
+    transform: rotate(180deg) translateX(50%);
+    top: auto;
+    bottom: -114px;
+}
+
+.droplets {
+    position: absolute;
+    width: 50px;
+    top: 270px;
+    right: 20px;
+}
+
+.calculator {
+    position: relative;
+    top: 30px;
+    border: 5px solid white;
+    padding: 50px 80px 35px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Candal', sans-serif;
+    font-size: 20px;
+}
+
+select {
+    margin: 10px 0 15px;
+    font-size: 14px;
+    z-index: 4;
+}
+
+input {
+    border: none;
+    padding: 7px 15px;
+    z-index: 4;
+    margin: 10px 0 15px;
+    font-size: 14px;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: 3px solid white;
+    margin: 10px 0 ;
+    z-index: 4;
+}
+
+.tip {
+    background: transparent;
+    color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid white;
+}
+
+
+/* ****** Title Styles ******* */
+.street-machine {
+  position: relative;
+  z-index: 3;
+}
+
+.street {
+  position: relative;
+  font-family: 'Candal', sans-serif;
+  font-size: 100px;
+  left: -30px;
+  font-style: italic;
+  -webkit-text-stroke: 0.1px #ed2121;
+  color: #fff;
+  text-shadow: -10px 10px 0px #ed2121;
+  margin: 0;
+}
+
+.windows .street {
+  -webkit-text-stroke: 4px #ed2121;
+}
+
+
+.street:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 305px;
+  top: 75px;
+  left: 70px;
+  background: #ed2121;
+  box-shadow: -4px 13px #ed2121;
+}
+
+.machine {
+  position: absolute;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 75px;
+  transform:rotate(-10deg);
+  -ms-transform:rotate(-10deg); /* IE 9 */
+  -webkit-transform:rotate(-10deg); /* Safari and Chrome */
+  color: #8d0101;
+  margin: 0;
+  text-shadow: 1px 2px 0px rgb(241, 142, 142);
+  left: 170px;
+  top: 67px;
+  transform: skew(25deg,-7deg);
+}
+
+.windows .machine {
+  margin-top: -200px;
+}
+
