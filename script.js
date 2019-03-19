@@ -2,37 +2,38 @@ var button = document.getElementById("calcula");
 var finalAmount = document.getElementById('finalAmount');
 
 
-function calculateOntarioTax(bill) {
-  return (bill * 0.13);
+function calculateOntarioTax(bill, taxPercent) {
+  return bill * taxPercent;
 }
 
 function calculateTipAmount(bill, tipPercent) {
-  return (bill * tipPercent);
+  return bill * tipPercent;
 }
 
 function calculatePerPerson(total, numOfPeople) {
-  return (total / numOfPeople);
+  return total / numOfPeople;
 }
 
 button.addEventListener("click", function() {
+  // Grab the bill amount from the page
   var billAmount = parseInt(document.getElementById("billAmount").value);
+  var tipPercent = parseFloat(document.getElementById("tip").value);
+  var splitBy = parseInt(document.getElementById("splitBy").value);
 
-  var tipPercent = document.getElementById("tip").value;
-  var splitBy = document.getElementById("splitBy").value;
-
-  var tax = calculateOntarioTax(billAmount);
+  // Calculate tax
+  var tax = calculateOntarioTax(billAmount, 0.13);
+  // Add tax to bill total
   var billWithTax = tax + billAmount;
-  var tip = calculateTipAmount( billWithTax , tipPercent);
-  var billTotal = (tip + billWithTax);
+
+  // Calculate tip
+  var tip = calculateTipAmount(billWithTax , tipPercent);
+  // Add tip to the bill total with tax
+  var billTotal = tip + billWithTax;
 
 
+  // Calculate how much each person owes
   var amountPerPerson = calculatePerPerson(billTotal, splitBy);
+  // Change the HTML to the amount per person, to 2 decimal places
   finalAmount.innerHTML = amountPerPerson.toFixed(2);
 });
 
-// for font
-// if (navigator.platform.indexOf('Win') != -1) {
-//     window.document.getElementById("wrapper").setAttribute("class", "windows");
-// } else if (navigator.platform.indexOf('Mac') != -1) {
-//     window.document.getElementById("wrapper").setAttribute("class", "mac");
-// }

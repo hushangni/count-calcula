@@ -79,7 +79,14 @@ button {
     border: 3px solid white;
     margin: 10px 0 ;
     z-index: 4;
+    transition: all 0.4s ease;
 }
+
+button:hover {
+  background-color: #ed2121;
+  border-color: #ed2121;
+}
+
 
 .tip {
     background: transparent;
