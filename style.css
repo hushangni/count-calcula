@@ -70,6 +70,7 @@ input {
     z-index: 4;
     margin: 10px 0 15px;
     font-size: 14px;
+    text-align: center;
 }
 
 button {
@@ -115,6 +116,7 @@ button:hover {
   color: #fff;
   text-shadow: -10px 10px 0px #ed2121;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .windows .street {
@@ -152,3 +154,32 @@ button:hover {
   margin-top: -200px;
 }
 
+h3 {
+  font-family: "Mr Dafoe", cursive;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #8d0101;
+  text-shadow: 1px 2px 0px rgb(241, 142, 142);
+}
+
+@media (max-width: 500px) {
+  .street {
+    font-size: 80px;
+  }
+
+  .machine {
+    font-size: 60px;
+    top: 55px;
+    left: 145px;
+  }
+
+  .teeth {
+    top: 56px;
+  }
+
+  .street:after {
+    width: 260px;
+    top: 55px;
+  }
+}
